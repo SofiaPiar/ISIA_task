@@ -48,7 +48,11 @@ public class Matriz {
         return matrizResultante; 
     } 
 
+<<<<<<< Updated upstream
      public static Matriz multiplicarMatriz(double n, Matriz a) {
+=======
+     public static Matriz multiplicarMatrizEscalar(double n, Matriz a) {
+>>>>>>> Stashed changes
         int i, j, dimensionA;
         dimensionA = a.getDimension().height;
         for(i = 0; i < dimensionA; i++){
@@ -56,10 +60,33 @@ public class Matriz {
                      a.datos[i][j]= (int) (a.datos[i][j] * n);
                 }
         }
+<<<<<<< Updated upstream
         
         return a;
     }
 
+=======
+    
+        return a;
+    }
+
+     public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) {
+        if(! a.getDimension().equals(b.getDimension())) throw new DimensionesIncompatibles("La multiplicación de matrices requiere matrices de las mismas dimensiones");   
+        int i, j, filasA, columnasA; 
+        filasA = a.getDimension().height; 
+        columnasA = a.getDimension().width; 
+        Matriz matrizResultante = new Matriz(filasA, columnasA, false);
+         for (j = 0; j < filasA; j++) { 
+            for (i = 0; i < columnasA; i++) { 
+                 for(int k=0; k<columnasA;; k++){
+                    matrizResultante.datos[i][j]+=a.datos[i][k] * b.datos[k][j];
+                }
+            }
+        }
+        return matrizResultante;
+    }
+
+>>>>>>> Stashed changes
     @Override
     public String toString(){
         String ret = "";
