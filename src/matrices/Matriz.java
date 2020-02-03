@@ -48,11 +48,7 @@ public class Matriz {
         return matrizResultante; 
     } 
 
-<<<<<<< Updated upstream
-     public static Matriz multiplicarMatriz(double n, Matriz a) {
-=======
      public static Matriz multiplicarMatrizEscalar(double n, Matriz a) {
->>>>>>> Stashed changes
         int i, j, dimensionA;
         dimensionA = a.getDimension().height;
         for(i = 0; i < dimensionA; i++){
@@ -60,12 +56,6 @@ public class Matriz {
                      a.datos[i][j]= (int) (a.datos[i][j] * n);
                 }
         }
-<<<<<<< Updated upstream
-        
-        return a;
-    }
-
-=======
     
         return a;
     }
@@ -86,7 +76,6 @@ public class Matriz {
         return matrizResultante;
     }
 
->>>>>>> Stashed changes
     @Override
     public String toString(){
         String ret = "";
